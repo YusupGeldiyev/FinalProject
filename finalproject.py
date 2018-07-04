@@ -202,7 +202,7 @@ def Backsub(R,b):
   '''
   This function takes a matrix and a vector as its arguments and computes the backsubstitution to get c vector.
   '''
- 
+  b=TmatVec(Q,y) 
   #identifying vector to access variables of vector
   R=len(b)-1
   #creates empty vector
@@ -229,7 +229,7 @@ y=[1.102,1.099,1.017,1.111,1.136,1.265,1.380,1.375,1.857]
 GS_Solution=GST(A)
 Q=GS_Solution[0]
 R=GS_Solution[1]
-b=TmatVec(Q,y) 
+
 c=Backsub(R,b)
 
 print(c)
